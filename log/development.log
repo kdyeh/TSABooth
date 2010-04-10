@@ -61,3 +61,72 @@ Migrating to AddUserFields (20100410185943)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tasks")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing AchievementsController#index (for 127.0.0.1 at 2010-04-10 15:49:36) [GET]
+  [4;36;1mAchievement Load (0.6ms)[0m   [0;1mSELECT * FROM "achievements" [0m
+Rendering template within layouts/application
+Rendering achievements/index
+Completed in 152ms (View: 94, DB: 1) | 200 OK [http://localhost/achievements]
+
+
+Processing AchievementsController#new (for 127.0.0.1 at 2010-04-10 15:49:38) [GET]
+Rendering template within layouts/application
+Rendering achievements/new
+Rendered achievements/_form (6.7ms)
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/achievements/new]
+
+
+Processing TasksController#index (for 127.0.0.1 at 2010-04-10 15:49:58) [GET]
+  [4;35;1mTask Load (0.6ms)[0m   [0mSELECT * FROM "tasks" [0m
+Rendering template within layouts/application
+Rendering tasks/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/tasks]
+
+
+Processing TaskUsersController#index (for 127.0.0.1 at 2010-04-10 15:50:23) [GET]
+  [4;36;1mTaskUser Load (0.5ms)[0m   [0;1mSELECT * FROM "task_users" [0m
+Rendering template within layouts/application
+Rendering task_users/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/task_users]
+
+
+Processing TaskUsersController#new (for 127.0.0.1 at 2010-04-10 15:50:25) [GET]
+Rendering template within layouts/application
+Rendering task_users/new
+Rendered task_users/_form (4.9ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/task_users/new]
+
+
+Processing PerksController#index (for 127.0.0.1 at 2010-04-10 15:52:25) [GET]
+  [4;35;1mPerk Load (0.5ms)[0m   [0mSELECT * FROM "perks" [0m
+Rendering template within layouts/application
+Rendering perks/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/perks]
+
+
+Processing PerksController#new (for 127.0.0.1 at 2010-04-10 15:52:27) [GET]
+Rendering template within layouts/application
+Rendering perks/new
+Rendered perks/_form (5.5ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/perks/new]
+
+
+Processing PerksController#show (for 127.0.0.1 at 2010-04-10 15:52:32) [GET]
+  Parameters: {"id"=>"users"}
+  [4;36;1mPerk Load (0.1ms)[0m   [0;1mSELECT * FROM "perks" WHERE ("perks"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Perk with ID=users):
+  app/controllers/perks_controller.rb:7:in `show'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-10 15:52:42) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
