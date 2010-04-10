@@ -1,0 +1,16 @@
+<% title "Task User" %>
+
+<p>
+  <strong>Task:</strong>
+  <%=h @task_user.task_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @task_user.user_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_task_user_path(@task_user) %> |
+  <%= link_to "Destroy", @task_user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", task_users_path %>
+</p>

@@ -1,0 +1,21 @@
+<% title "Perks" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Cost</th>
+  </tr>
+  <% for perk in @perks %>
+    <tr>
+      <td><%=h perk.name %></td>
+      <td><%=h perk.description %></td>
+      <td><%=h perk.cost %></td>
+      <td><%= link_to "Show", perk %></td>
+      <td><%= link_to "Edit", edit_perk_path(perk) %></td>
+      <td><%= link_to "Destroy", perk, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Perk", new_perk_path %></p>

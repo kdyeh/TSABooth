@@ -1,0 +1,19 @@
+<% title "Task Users" %>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>User</th>
+  </tr>
+  <% for task_user in @task_users %>
+    <tr>
+      <td><%=h task_user.task_id %></td>
+      <td><%=h task_user.user_id %></td>
+      <td><%= link_to "Show", task_user %></td>
+      <td><%= link_to "Edit", edit_task_user_path(task_user) %></td>
+      <td><%= link_to "Destroy", task_user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Task User", new_task_user_path %></p>

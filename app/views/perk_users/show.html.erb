@@ -1,0 +1,16 @@
+<% title "Perk User" %>
+
+<p>
+  <strong>Perk:</strong>
+  <%=h @perk_user.perk_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @perk_user.user_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_perk_user_path(@perk_user) %> |
+  <%= link_to "Destroy", @perk_user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", perk_users_path %>
+</p>

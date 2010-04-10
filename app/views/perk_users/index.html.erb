@@ -1,0 +1,19 @@
+<% title "Perk Users" %>
+
+<table>
+  <tr>
+    <th>Perk</th>
+    <th>User</th>
+  </tr>
+  <% for perk_user in @perk_users %>
+    <tr>
+      <td><%=h perk_user.perk_id %></td>
+      <td><%=h perk_user.user_id %></td>
+      <td><%= link_to "Show", perk_user %></td>
+      <td><%= link_to "Edit", edit_perk_user_path(perk_user) %></td>
+      <td><%= link_to "Destroy", perk_user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Perk User", new_perk_user_path %></p>

@@ -1,0 +1,20 @@
+<% title "Perk" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @perk.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @perk.description %>
+</p>
+<p>
+  <strong>Cost:</strong>
+  <%=h @perk.cost %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_perk_path(@perk) %> |
+  <%= link_to "Destroy", @perk, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", perks_path %>
+</p>

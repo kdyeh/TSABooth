@@ -1,0 +1,19 @@
+<% title "Achievement Users" %>
+
+<table>
+  <tr>
+    <th>Achievement</th>
+    <th>User</th>
+  </tr>
+  <% for achievement_user in @achievement_users %>
+    <tr>
+      <td><%=h achievement_user.achievement_id %></td>
+      <td><%=h achievement_user.user_id %></td>
+      <td><%= link_to "Show", achievement_user %></td>
+      <td><%= link_to "Edit", edit_achievement_user_path(achievement_user) %></td>
+      <td><%= link_to "Destroy", achievement_user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Achievement User", new_achievement_user_path %></p>
